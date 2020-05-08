@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import {OfertasService} from '../ofertas.service';
 import {Oferta} from '../shared/oferta.model';
 
+
+
 @Component({
   selector: 'app-oferta',
   templateUrl: './oferta.component.html',
