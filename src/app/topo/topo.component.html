@@ -3,22 +3,26 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-      <a href="#" class="navbar-brand">
-        <img src="/assets/logo.png" />
-      </a>
-      <a a href="#"><img src="/assets/carrinho.png" /></a>
-    </div>
+          <a class="navbar-brand" routerLink="">
+            <img src="/assets/logo.png" />
+          </a>
+        </div>
+        <div class="col-md-6">
+          <input type="text" 
+            class="form-control" 
+            placeholder="Pesquise por ofertas..." 
+            #termoDaPesquisa
+            (keyup)="pesquisa(termoDaPesquisa.value)"
+          />
+          <ul class="list-group" style="position: absolute">
+            <li class="list-group-item" *ngFor="let oferta of ofertas2">{{ oferta.titulo }}</li>
+          </ul>
 
-    <div class="col-md-6">
-      <input type="text"
-        class="form-control"
-        placeholder="Pesquise por ofertas..."
-        #termoDaPesquisa
-        (keyup)="pesquisa(termoDaPesquisa.value)" 
-      />
-    </div>
-    <div class="col-md-2">
-      <a a href="#"><img src="/assets/carrinho.png"/></a>
+        </div>
+        <div class="col-md-2">
+            <a a href="#"><img src="/assets/carrinho.png" /></a>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -26,10 +30,10 @@
     <div class="container">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Restaurantes</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/restaurantes">Restaurantes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Diversão</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/diversao">Diversão</a>
         </li>
       </ul>
     </div>

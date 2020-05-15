@@ -10,7 +10,7 @@ import { OfertasService } from '../../ofertas.service'
 })
 export class OndeFicaComponent implements OnInit {
 
-	public OndeFica: string = ''
+	public ondeFica: string = ''
 
   constructor(
   	private route: ActivatedRoute,
@@ -20,7 +20,7 @@ export class OndeFicaComponent implements OnInit {
   ngOnInit() {
   	this.ofertasService.getOndeFicaOfertaPorId(this.route.parent.snapshot.params['id'])
   	.then((descricao: string) => {
-  		this.OndeFica = descricao
+  		this.ondeFica = descricao
   	  })
 
 	}
