@@ -23,10 +23,11 @@
 
       <div class="row">
         <p>Anunciado por: <b>{{ oferta.anunciante }}</b></p>
+        <h4>{{dataTeste | date: }}</h4>
       </div>
 
       <div class="row">
-        <p>{{ oferta.valor }}</p>
+        <p>{{ oferta.valor | currency: 'BRL': true }}</p>
       </div>
 
       <div class="row">
