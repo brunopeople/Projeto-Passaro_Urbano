@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Oferta} from '../shared/oferta.model'
-import {OfertasService} from '../ofertas.service'
+import { Oferta } from '../shared/oferta.model'
+import { OfertasService } from '../ofertas.service'
 
 @Component({
   selector: 'app-restaurantes',
@@ -10,22 +10,15 @@ import {OfertasService} from '../ofertas.service'
 })
 export class RestaurantesComponent implements OnInit {
 
-	public ofertas: Oferta[]
+  public ofertas: Oferta[]
 
-  public dataTeste: any = new Date(2017, 8, 30)
-
-  constructor(private OfertasService: OfertasService) { }
+  constructor(private ofertasService: OfertasService) { }
 
   ngOnInit() {
-
-  	/*
-  	*instanciar o método getOfertasPorCategoria na classe ofertasService no componente restaurantes
-  	 com isto 
-  	**/
-  	this.OfertasService.getOfertasPorCategoria('restaurante')
-  		.then((ofertas: Oferta[]) => {
-  			this.ofertas = ofertas 
-  		})
+    this.ofertasService.getOfertasPorCategoria('restaurante')
+      .then(( ofertas: Oferta[] ) => {
+        this.ofertas = ofertas
+      })
   }
 
 }

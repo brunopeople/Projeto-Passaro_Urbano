@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable'
 import { Subject } from 'rxjs/Subject'
 
-import '../utils/rxjs-extensions'
+import '../util/rxjs-extensions'
 
 import { OfertasService } from '../ofertas.service'
 import { Oferta } from '../shared/oferta.model'
@@ -15,7 +15,7 @@ import { Oferta } from '../shared/oferta.model'
 })
 export class TopoComponent implements OnInit {
 
- public ofertas: Observable<Oferta[]>
+  public ofertas: Observable<Oferta[]>
   
   private subjectPesquisa: Subject<string> = new Subject<string>()
 
